@@ -1,0 +1,18 @@
+SELECT * FROM shop.items;
+USE shop;
+INSERT INTO items(name) VALUES ('apple');
+INSERT INTO items(name) VALUES ('banana');
+INSERT INTO items(name) VALUES ('grape');
+ALTER TABLE items ADD img_path VARCHAR(100) null;
+ALTER TABLE items ADD price INT null;
+ALTER TABLE items ADD discount_per INT null;
+DELETE FROM items WHERE id BETWEEN 4 AND 6;
+UPDATE items SET img_path = '/img/img1.jpg' WHERE id = 1;
+UPDATE items SET price = '100000' WHERE id = 1;
+UPDATE items SET discount_per = '5' WHERE id = 1;
+UPDATE items SET img_path = '/img/img2.jpg' WHERE id = 2;
+UPDATE items SET price = '200000' WHERE id = 2;
+UPDATE items SET discount_per = '10' WHERE id = 2;
+UPDATE items SET img_path = '/img/img3.jpg' WHERE id = 3;
+UPDATE items SET price = '500000' WHERE id = 3;
+UPDATE items SET discount_per = '30' WHERE id = 3;
